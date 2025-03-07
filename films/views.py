@@ -11,5 +11,5 @@ def text(request):
 
 def image(request):
     if request.method == "GET":
-        return HttpResponse("<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.computerworld.com%2Farticle%2F2140508%2Fwhy-microsoft-keeps-adding-new-features-to-windows-10.html&psig=AOvVaw28vD-NV6JQKjXQFbx4pd9l&ust=1741177962791000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiDg8K38IsDFQAAAAAdAAAAABAE'>")
+        return HttpResponse("<img src='https://www.bethowen.ru/upload/iblock/898/8982eee1d576c30e28811046c021a8af.jpg' >")
 
