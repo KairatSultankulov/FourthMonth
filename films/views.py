@@ -13,3 +13,5 @@ def image(request):
     if request.method == "GET":
         return HttpResponse("<img src='https://www.bethowen.ru/upload/iblock/898/8982eee1d576c30e28811046c021a8af.jpg' >")
 
+
+
