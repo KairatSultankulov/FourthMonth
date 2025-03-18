@@ -61,3 +61,4 @@ def delete_task(request, id):
     task_id = get_object_or_404(models.TodoList, id=id)
     task_id.delete()
     return redirect('task_list')
+
