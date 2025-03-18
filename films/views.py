@@ -1,5 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+from . import models
+
+
+def film_detail(request, id):
+    if request.method == 'GET':
+        film_id = get_object_or_404(models.Films, id=id)
+        return render(
+            request,
+            template_name='show_detail.html',
+            context={
+                'film_id': film_id,
+            }
+        )
+
+def films_list(request):
+    if request.method == 'GET':
+        query = models.Films.objects.all()
+        return render(
+            request,
+            template_name='show.html',
+            context={
+                'query': query,
+            }
+        )
+
+
+
 
 def emodji(request):
     if request.method == "GET":
@@ -11,4 +38,7 @@ def text(request):
 
 def image(request):
     if request.method == "GET":
-        return HttpResponse("<img src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.computerworld.com%2Farticle%2F2140508%2Fwhy-microsoft-keeps-adding-new-features-to-windows-10.html&psig=AOvVaw28vD-NV6JQKjXQFbx4pd9l&ust=1741177962791000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiDg8K38IsDFQAAAAAdAAAAABAE'>")
+        return HttpResponse("<img src='https://www.bethowen.ru/upload/iblock/898/8982eee1d576c30e28811046c021a8af.jpg' >")
+
+
+
