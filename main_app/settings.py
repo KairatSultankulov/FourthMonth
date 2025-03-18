@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'films',
     'hashtags',
+    'crud',
 ]
 
 MIDDLEWARE = [
