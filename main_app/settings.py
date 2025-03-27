@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'films',
     'hashtags',
     'crud',
+    'parser_app',
 ]
 
 MIDDLEWARE = [

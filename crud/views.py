@@ -11,7 +11,7 @@ class CreateTaskView(generic.CreateView):
 
     def form_valid(self, form):
         print(form.cleaned_data)
-        return super(CreateTask, self).form_valid(form=form)
+        return super(CreateTaskView, self).form_valid(form=form)
 
     # create todo
 
