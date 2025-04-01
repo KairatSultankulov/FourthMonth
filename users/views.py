@@ -4,6 +4,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import CreateView, ListView
 from . import models, forms
 
+
 class RegisterView(CreateView):
     template_name = 'users/register.html'
     form_class = forms.CustomRegisterForm
@@ -17,8 +18,10 @@ class AuthLoginView(LoginView):
     def get_success_url(self):
         return reverse("users:user_list")
 
+
 class AuthLogoutView(LogoutView):
     next_page = reverse_lazy("users:login")
+
 
 class UserListView(ListView):
     template_name = 'users/user_list.html'
